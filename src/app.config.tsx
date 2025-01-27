@@ -1,5 +1,5 @@
 import chatSphere from "@/assets/images/Chat-Sphere-home.jpg";
-import TastyKitchens from "@/assets/images/tastyKitchens.png";
+import TastyKitchens from "@/assets/images/TastyKitchens.png";
 import NxtWatchApp from "@/assets/images/NxtWatch-app.png";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
