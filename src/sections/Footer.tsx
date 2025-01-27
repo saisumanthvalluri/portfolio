@@ -1,22 +1,5 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-const links = [
-    {
-        title: "Github",
-        link: "https://github.com/saisumanthvalluri",
-    },
-    {
-        title: "LinkedIn",
-        link: "https://www.linkedin.com/in/v-sai-sumanth/",
-    },
-    {
-        title: "Twitter",
-        link: "https://x.com/SaiSumanth_3123",
-    },
-    {
-        title: "YouTube",
-        link: "https://www.youtube.com/@vsaisumanth9546",
-    },
-];
+import { PortfolioData } from "@/app.config";
 
 export const Footer = () => {
     return (
@@ -26,7 +9,7 @@ export const Footer = () => {
                 <div className="border-t border-white/15 py-6 text-sm flex flex-col md:flex-row items-center md:justify-between gap-8">
                     <div className="text-white/40">&copy; 2025. All rights reserved.</div>
                     <nav className="flex flex-col md:flex-row items-center gap-8 z-0">
-                        {links.map((link) => (
+                        {PortfolioData?.footerLinks.map((link) => (
                             <a
                                 href={link.link}
                                 key={link.title}

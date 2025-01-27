@@ -1,6 +1,3 @@
-import chatSphere from "@/assets/images/Chat-Sphere-home.jpg";
-import TastyKitchens from "@/assets/images/tastyKitchens.png";
-import NxtWatchApp from "@/assets/images/NxtWatch-app.png";
 // import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 // import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
 // import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
@@ -9,48 +6,7 @@ import ArrowRightIcon from "@/assets/icons/arrow-up-right.svg";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
-
-const portfolioProjects = [
-    {
-        company: "INFINITY LEARN",
-        year: "2022",
-        title: "Chat Sphere",
-        results: [
-            { title: "Real-time chatting with friends" },
-            { title: "Share images, files, and media" },
-            { title: "Friend requests and blocking options" },
-            { title: "Interactive profiles with animations" },
-        ],
-        link: "https://chat-sphere-ochre.vercel.app/signin",
-        image: chatSphere,
-    },
-    {
-        company: "NXT WAVE",
-        year: "2021",
-        title: "Tasty Kitchens",
-        results: [
-            { title: "Seamless restaurant and food searches" },
-            { title: "Sophisticated rating and filters" },
-            { title: "User-friendly cart functionality" },
-            { title: "Secure login/logout for users" },
-        ],
-        link: "https://tasty-kitchens-app.web.app/login",
-        image: TastyKitchens,
-    },
-    {
-        company: "NXT WAVE",
-        year: "2023",
-        title: "NXTWatch (YouTube)",
-        results: [
-            { title: "User authentication and personalization" },
-            { title: "Toggle between Dark/Light modes" },
-            { title: "Save and like videos easily" },
-            { title: "Username: rahul, Password: rahul@2021" },
-        ],
-        link: "https://nwatchsumanth.ccbp.tech/login",
-        image: NxtWatchApp,
-    },
-];
+import { PortfolioData } from "@/app.config";
 
 export const ProjectsSection = () => {
     return (
@@ -62,7 +18,7 @@ export const ProjectsSection = () => {
                     sectionDescription="See how I transformed concepts into engaging digital experiences."
                 />
                 <div className="flex flex-col mt-10 md:mt-20 gap-20">
-                    {portfolioProjects.map((project, index) => (
+                    {PortfolioData.portfolioProjects.map((project, index) => (
                         <Card
                             key={project.title}
                             className="px-8 pt-8 pb-0 md:pt-12 md:px-10 lg:pt-16 lg:px-20 sticky top-16"

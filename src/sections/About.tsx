@@ -3,95 +3,13 @@ import Card from "@/components/Card";
 import SectionHeader from "@/components/SectionHeader";
 import bookImage from "@/assets/images/book-cover.png";
 import Image from "next/image";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HtmlIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
-import ReactIcon from "@/assets/icons/react.svg";
-import NextIcon from "@/assets/icons/next-js.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
-import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMomoji from "@/assets/images/memoji-smile.png";
 import CardHeader from "@/components/CardHeader";
 import ToolboxItems from "@/components/ToolboxItems";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-
-const tools = [
-    {
-        title: "JavaScript",
-        iconType: JavascriptIcon,
-    },
-    {
-        title: "HTML5",
-        iconType: HtmlIcon,
-    },
-    {
-        title: "CSS3",
-        iconType: CssIcon,
-    },
-    {
-        title: "React",
-        iconType: ReactIcon,
-    },
-    {
-        title: "Chrome",
-        iconType: ChromeIcon,
-    },
-    {
-        title: "Github",
-        iconType: GithubIcon,
-    },
-    {
-        title: "Next.js",
-        iconType: NextIcon,
-    }
-];
-
-const hobbies = [
-    {
-        title: "Painting",
-        emoji: "🎨",
-        left: "5%",
-        top: "5%",
-    },
-    {
-        title: "Photography",
-        emoji: "📷",
-        left: "50%",
-        top: "5%",
-    },
-    {
-        title: "Hiking",
-        emoji: "🌲",
-        left: "35%",
-        top: "40%",
-    },
-    {
-        title: "Gaming",
-        emoji: "🎮",
-        left: "10%",
-        top: "35%",
-    },
-    {
-        title: "Music",
-        emoji: "🎶",
-        left: "70%",
-        top: "45%",
-    },
-    {
-        title: "Fitness",
-        emoji: "🏋️‍♀️",
-        left: "5%",
-        top: "65%",
-    },
-    {
-        title: "Reading",
-        emoji: "📚",
-        left: "45%",
-        top: "70%",
-    },
-];
+import { PortfolioData } from "@/app.config";
 
 export const AboutSection = () => {
     const constraintsTRef = useRef(null);
@@ -121,12 +39,12 @@ export const AboutSection = () => {
 
                             <ToolboxItems
                                 className=""
-                                tools={tools}
+                                tools={PortfolioData?.techSkills}
                                 translateClass="animate-move-left [animation-duration:30s]"
                             />
                             <ToolboxItems
                                 className="mt-6"
-                                tools={tools}
+                                tools={PortfolioData?.techSkills}
                                 translateClass="-translate-x-1/2 animate-move-right [animation-duration:15s]"
                             />
                         </Card>
@@ -140,7 +58,7 @@ export const AboutSection = () => {
                                 className="px-6 py-6"
                             />
                             <div className="relative flex-1" ref={constraintsTRef}>
-                                {hobbies.map((hobby) => (
+                                {PortfolioData?.hobbies.map((hobby) => (
                                     <motion.div
                                         key={hobby.title}
                                         className="inline-flex items-center gap-2 px-6 bg-gradient-to-tr from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
