@@ -4,12 +4,10 @@ import { useEffect, useState } from "react";
 
 export const Header = () => {
     const [tab, setTab] = useState<any>("#HOME");
-    const hash = window.location.hash;
-    console.log(hash);
 
     useEffect(() => {
-        !hash ? setTab("#HOME") : setTab(hash);
-    }, [hash]);
+        const hash = window.location.hash || "#HOME";
+    }, []);
 
     return (
         <div className="flex justify-center items-center fixed left-1/2 -translate-x-1/2 top-3 z-10">
