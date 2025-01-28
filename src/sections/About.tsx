@@ -75,10 +75,10 @@ export const AboutSection = () => {
                             </div>
                         </Card>
 
-                        <a
-                            href="https://www.google.com/maps/place/17%C2%B026'01.1%22N+78%C2%B026'22.4%22E/@17.43364,78.4369825,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.43364!4d78.4395574?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D"
-                            target="_blank">
-                            <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1 cursor-pointer">
+                        <Card className="h-[320px] p-0 relative md:col-span-2 lg:col-span-1 cursor-pointer">
+                            <a
+                                href="https://www.google.com/maps/place/17%C2%B026'01.1%22N+78%C2%B026'22.4%22E/@17.43364,78.4369825,17z/data=!3m1!4b1!4m4!3m3!8m2!3d17.43364!4d78.4395574?entry=ttu&g_ep=EgoyMDI1MDEyMS4wIKXMDSoASAFQAw%3D%3D"
+                                target="_blank">
                                 <Image
                                     src={mapImage}
                                     alt="map"
@@ -89,8 +89,8 @@ export const AboutSection = () => {
                                     <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-emerald-300 to-sky-400 -z-10"></div>
                                     <Image src={smileMomoji} alt="memoji" className="size-20" />
                                 </div>
-                            </Card>
-                        </a>
+                            </a>
+                        </Card>
                     </div>
                 </div>
             </div>
