@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
+import favIcon from '@/assets/images/memoji-computer.png'
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weight: ["400"] });
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
     description:
         "Discover Sai Sumanth's innovative projects, advanced technical skills, and exceptional testimonials. Let's build the future together!",
     icons: {
-        icon: "/favicon.ico",
+        icon: favIcon.src,
         apple: "/apple-touch-icon.png",
         shortcut: "/favicon-32x32.png",
     },
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
         siteName: "Sai Sumanth Portfolio",
         images: [
             {
-                url: "https://your-portfolio-domain.com/assets/images/og-image.jpg",
+                url: favIcon.src,
                 width: 1200,
                 height: 630,
                 alt: "Sai Sumanth Portfolio",
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
         description:
             "Discover Sai Sumanth's innovative projects, technical skills, and testimonials in modern web development.",
         creator: "@SaiSumanth_3123",
-        images: ["https://your-portfolio-domain.com/assets/images/og-image.jpg"],
+        images: [favIcon.src],
     },
     authors: [{ name: "Sai Sumanth", url: "https://sai-sumanth-portfolio.vercel.app/" }],
     publisher: "Sai Sumanth",
