@@ -14,7 +14,7 @@ import { PortfolioData } from "@/app.config";
 export const AboutSection = () => {
     const constraintsTRef = useRef(null);
     return (
-        <div className="py-20 lg:py-28">
+        <div className="py-20 lg:py-28" id="ABOUT">
             <div className="container">
                 <SectionHeader
                     sectionTag="about me"

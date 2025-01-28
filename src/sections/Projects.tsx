@@ -10,7 +10,7 @@ import { PortfolioData } from "@/app.config";
 
 export const ProjectsSection = () => {
     return (
-        <section className="pb-16 lg:py-24">
+        <section className="pb-16 lg:py-24" id="PROJECTS">
             <div className="container">
                 <SectionHeader
                     sectionTag="Real-world Results"

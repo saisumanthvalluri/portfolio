@@ -7,6 +7,14 @@ import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import JavascriptIcon from "@/assets/icons/square-js.svg";
+import TypeScript from "@/assets/icons/typescript.svg";
+import Angular from "@/assets/icons/angular.svg";
+import Node from "@/assets/icons/node.svg";
+import Express from "@/assets/icons/express.svg";
+import Figma from "@/assets/icons/figma.svg";
+import Jira from "@/assets/icons/jira.svg";
+import Tailwind from "@/assets/icons/tailwing.svg";
+import MongoDB from "@/assets/icons/mongodb.svg";
 import HtmlIcon from "@/assets/icons/html5.svg";
 import CssIcon from "@/assets/icons/css3.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -105,8 +113,36 @@ export const PortfolioData = {
 
     techSkills: [
         {
+            title: "TypeScript",
+            iconType: TypeScript,
+        },
+        {
             title: "JavaScript",
             iconType: JavascriptIcon,
+        },
+        {
+            title: "Next.js",
+            iconType: NextIcon,
+        },
+        {
+            title: "React.js",
+            iconType: ReactIcon,
+        },
+        {
+            title: "Node",
+            iconType: Node,
+        },
+        {
+            title: "Express",
+            iconType: Express,
+        },
+        {
+            title: "AngularJs",
+            iconType: Angular,
+        },
+        {
+            title: "MongoDB",
+            iconType: MongoDB,
         },
         {
             title: "HTML5",
@@ -117,8 +153,17 @@ export const PortfolioData = {
             iconType: CssIcon,
         },
         {
-            title: "React",
-            iconType: ReactIcon,
+            title: "Tailwind",
+            iconType: Tailwind,
+        },
+        {
+            title: "Figma",
+            iconType: Figma,
+        },
+
+        {
+            title: "Jira",
+            iconType: Jira,
         },
         {
             title: "Chrome",
@@ -127,10 +172,6 @@ export const PortfolioData = {
         {
             title: "Github",
             iconType: GithubIcon,
-        },
-        {
-            title: "Next.js",
-            iconType: NextIcon,
         },
     ],
 
@@ -195,5 +236,5 @@ export const PortfolioData = {
             title: "YouTube",
             link: "https://www.youtube.com/@vsaisumanth9546",
         },
-    ]
+    ],
 };
