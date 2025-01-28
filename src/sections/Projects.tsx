@@ -32,7 +32,7 @@ export const ProjectsSection = () => {
                                         <span>&bull;</span>
                                         <span>{project.year}</span>
                                     </div>
-                                    <h3 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">{project.title}</h3>
+                                    <h2 className="font-serif text-2xl md:text-4xl mt-2 md:mt-5">{project.title}</h2>
                                     <hr className="border-t-2 border-white/5 mt-4 md:mt-5" />
                                     <ul className="flex flex-col gap-4 mt-4 md:mt-5">
                                         {project.results.map((result) => (
