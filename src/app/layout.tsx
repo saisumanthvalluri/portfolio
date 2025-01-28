@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Head from "next/head";
+import { Analytics } from "@vercel/analytics/react"
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
@@ -81,6 +81,7 @@ export default function RootLayout({
                     "bg-gray-900 text-white antialiased font-sans scroll-smooth"
                 )}>
                 {children}
+                <Analytics />
             </body>
         </html>
     );
