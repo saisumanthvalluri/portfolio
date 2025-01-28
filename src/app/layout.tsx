@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
 import { twMerge } from "tailwind-merge";
-import favIcon from '@/assets/images/memoji-computer.png'
+import favIcon from "@/assets/images/memoji-computer.png";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 const calistoga = Calistoga({ subsets: ["latin"], variable: "--font-serif", weight: ["400"] });
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     icons: {
         icon: favIcon.src,
         apple: "/apple-touch-icon.png",
-        shortcut: "/favicon-32x32.png",
+        shortcut: favIcon.src,
     },
     keywords: [
         "Sai Sumanth",

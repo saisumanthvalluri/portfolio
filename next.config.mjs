@@ -1,48 +1,54 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  webpack(config) {
-    // Grab the existing rule that handles SVG imports
-    const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg")
-    );
+    webpack(config) {
+        // Find the existing rule for handling SVG imports
+        const fileLoaderRule = config.module.rules.find((rule) => rule.test?.test?.(".svg"));
 
-    config.module.rules.push(
-      // Reapply the existing rule, but only for svg imports ending in ?url
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/, // *.svg?url
-      },
-      // Convert all other *.svg imports to React components
-      {
-        test: /\.svg$/i,
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
-        use: {
-          loader: "@svgr/webpack",
-          options: {
-            svgoConfig: {
-              plugins: [
+        if (fileLoaderRule) {
+            // Update rules to handle SVGs in two ways:
+            // 1. Use file-loader for *.svg?url imports
+            // 2. Use @svgr/webpack for all other *.svg imports
+            config.module.rules.push(
                 {
-                  name: "preset-default",
-                  params: {
-                    overrides: {
-                      removeViewBox: false,
-                    },
-                  },
+                    ...fileLoaderRule,
+                    test: /\.svg$/i,
+                    resourceQuery: /url/, // *.svg?url
                 },
-              ],
-            },
-          },
-        },
-      }
-    );
+                {
+                    test: /\.svg$/i,
+                    issuer: fileLoaderRule.issuer,
+                    resourceQuery: { not: [...(fileLoaderRule.resourceQuery?.not || []), /url/] },
+                    use: {
+                        loader: "@svgr/webpack",
+                        options: {
+                            svgoConfig: {
+                                plugins: [
+                                    {
+                                        name: "preset-default",
+                                        params: {
+                                            overrides: {
+                                                removeViewBox: false,
+                                            },
+                                        },
+                                    },
+                                ],
+                            },
+                        },
+                    },
+                }
+            );
 
-    // Modify the file loader rule to ignore *.svg, since we have it handled now.
-    fileLoaderRule.exclude = /\.svg$/i;
+            // Exclude *.svg from the original file loader rule
+            fileLoaderRule.exclude = /\.svg$/i;
+        }
 
-    return config;
-  },
+        return config;
+    },
+
+    // Add the @next/bundle-analyzer for optional analysis and remove console in production
+    experimental: {
+        removeConsole: true,
+    },
 };
 
 export default nextConfig;
