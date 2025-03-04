@@ -45,8 +45,7 @@ const nextConfig = {
         return config;
     },
 
-    // Add the @next/bundle-analyzer for optional analysis and remove console in production
-    experimental: {
+    compiler: {
         removeConsole: true,
     },
 };

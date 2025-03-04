@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { Inter, Calistoga } from "next/font/google";
 import "./globals.css";
@@ -65,7 +65,11 @@ export const metadata: Metadata = {
         follow: true,
         nocache: false,
     },
-    themeColor: "#111827", // Set a theme color for browsers and PWA
+    // themeColor: "#111827", // Set a theme color for browsers and PWA
+};
+
+export const viewport: Viewport = {
+    themeColor: "#111827",
 };
 
 export default function RootLayout({
