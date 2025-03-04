@@ -20,3 +20,11 @@
 html {
     scroll-behavior: smooth;
 }
+
+.line {
+    @apply overflow-hidden;
+}
+
+.word {
+    @apply translate-y-full;
+}
