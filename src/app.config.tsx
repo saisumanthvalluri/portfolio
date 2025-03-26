@@ -1,6 +1,7 @@
 import chatSphere from "@/assets/images/Chat-Sphere-home.jpg";
-import TastyKitchens from "@/assets/images/TastyKitchens.png";
+// import TastyKitchens from "@/assets/images/TastyKitchens.png";
 import NxtWatchApp from "@/assets/images/NxtWatch-app.png";
+import Spotify from "@/assets/images/spotify.jpg";
 import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
 import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
@@ -41,18 +42,31 @@ export const PortfolioData = {
             image: chatSphere,
         },
         {
-            company: "NXT WAVE",
-            year: "2021",
-            title: "Tasty Kitchens",
+            company: "PERSONAL PROJECT",
+            year: "2025",
+            title: "Spotify Clone",
             results: [
-                { title: "Seamless restaurant and food searches" },
-                { title: "Sophisticated rating and filters" },
-                { title: "User-friendly cart functionality" },
-                { title: "Secure login/logout for users" },
+                { title: "Developed a MERN-based music platform" },
+                { title: "Implemented real-time chat features" },
+                { title: "Integrated live user activity tracking" },
+                { title: "Optimized performance and analytics" },
             ],
-            link: "https://tasty-kitchens-app.web.app/login",
-            image: TastyKitchens,
+            link: "https://spotify-ajt1.onrender.com/",
+            image: Spotify,
         },
+        // {
+        //     company: "NXT WAVE",
+        //     year: "2021",
+        //     title: "Tasty Kitchens",
+        //     results: [
+        //         { title: "Seamless restaurant and food searches" },
+        //         { title: "Sophisticated rating and filters" },
+        //         { title: "User-friendly cart functionality" },
+        //         { title: "Secure login/logout for users" },
+        //     ],
+        //     link: "https://tasty-kitchens-app.web.app/login",
+        //     image: TastyKitchens,
+        // },
         {
             company: "NXT WAVE",
             year: "2023",
